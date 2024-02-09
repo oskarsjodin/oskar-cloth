@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+firebaseid
+crown-clothing-db-f1be7
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
