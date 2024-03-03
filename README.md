@@ -3,6 +3,8 @@
 firebaseid
 crown-clothing-db-f1be7
 
+copy of https://github.com/ZhangMYihua/crwn-clothing-v2/blob/lesson-9/src/utils/firebase/firebase.utils.js
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

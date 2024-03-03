@@ -4,9 +4,13 @@ import {
   signInWithRedirect,
   signInWithPopup,
   GoogleAuthProvider,
-  createUserWithEmailAndPassword
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged
 } from 'firebase/auth';
 import { getFirestore, doc, getDoc,setDoc } from 'firebase/firestore';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAkx2-PVgBT_1W3V-EI-_ukgT4KgBkbqjs",
@@ -61,4 +65,16 @@ export const createAuthUserWithEmailAndPassword = async (email, password) => {
   } catch (error) {
     console.error("Error creating user", error);
   }
+}
+
+export const signInAuthUserWithEmailAndPassword = async (email, password) => {
+  if(!email || !password) return;
+  return await signInWithEmailAndPassword(auth, email, password);
+
+}
+
+export const signOutUser = async () => await signOut(auth);
+
+export const onAuthStateChangedListener = (callback) => {
+  return onAuthStateChanged(auth, callback);
 }
