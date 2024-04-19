@@ -20,6 +20,7 @@ import {
   getDocs,
 } from 'firebase/firestore';
 
+
 const firebaseConfig = {
   apiKey: 'AIzaSyDDU4V-_QV3M8GyhC9SVieRTDM4dbiT0Yk',
   authDomain: 'crwn-clothing-db-98d4d.firebaseapp.com',
@@ -43,7 +44,7 @@ export const signInWithGooglePopup = () =>
 export const signInWithGoogleRedirect = () =>
   signInWithRedirect(auth, googleProvider);
 
-export const db = getFirestore();
+export const db = getFirestore(firebaseApp);
 
 export const addCollectionAndDocuments = async (
   collectionKey,
